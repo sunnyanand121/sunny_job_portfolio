@@ -22,13 +22,13 @@ module.exports = {
           300: "#16181d",
           500: "#0f1115",
           700: "#202125",
-        }
-      }
+        },
+      },
     },
   },
   variants: {
     extend: {
-      boxShadow: ["dark"]
+      boxShadow: ["dark"],
     },
   },
   plugins: [],

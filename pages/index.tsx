@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { motion } from "framer-motion";
-import { GetServerSidePropsContext, NextPage } from "next";
+import { GetServerSideProps, GetServerSidePropsContext, NextPage } from "next";
 import React from "react";
 import { fadeInUp, routerAnimarion, stagger } from "../animation";
 import ServiceCard from "../component/ServiceCard";
@@ -47,14 +47,11 @@ const About: NextPage = () => {
 
 export default About;
 
-export const getServerSideProps = async (context: GetServerSidePropsContext) => {
-
-  const res = await fetch(`${process.env.VERCEL_URL}/api/services`)
-  const data = await res.json()
-
-  return {
-    props:{
-      endpoint: process.env.VERCEL_URL,
-    }
-  }
-}
+export const getServerSideProps: GetServerSideProps = async (
+  context: GetServerSidePropsContext
+) => {
+  const BASE_URL = process.env.VERCEL_URL;
+  // const res = await fetch(`${BASE_URL}api/services`);
+  // const data = await res.json();
+  return { props: { BASE_URL: BASE_URL } };
+};
