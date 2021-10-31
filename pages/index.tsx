@@ -53,5 +53,5 @@ export const getServerSideProps: GetServerSideProps = async (
   const BASE_URL = process.env.VERCEL_URL;
   // const res = await fetch(`${BASE_URL}api/services`);
   // const data = await res.json();
-  return { props: { BASE_URL: BASE_URL } };
+  return { props: { BASE_URL: BASE_URL || null } };
 };
