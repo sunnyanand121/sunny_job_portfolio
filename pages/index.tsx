@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import { motion } from "framer-motion";
 import { GetServerSidePropsContext } from "next";
 import React from "react";
