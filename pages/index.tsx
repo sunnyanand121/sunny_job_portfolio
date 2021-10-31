@@ -1,12 +1,12 @@
 /* eslint-disable react/jsx-key */
 import { motion } from "framer-motion";
-import { GetServerSidePropsContext } from "next";
+import { GetServerSidePropsContext, NextPage } from "next";
 import React from "react";
 import { fadeInUp, routerAnimarion, stagger } from "../animation";
 import ServiceCard from "../component/ServiceCard";
 import { services } from "../data";
 
-const index = () => {
+const About: NextPage = () => {
   return (
     <motion.div
     variants={routerAnimarion}
@@ -45,7 +45,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default About;
 
 export const getServerSideProps = async (context: GetServerSidePropsContext) => {
 

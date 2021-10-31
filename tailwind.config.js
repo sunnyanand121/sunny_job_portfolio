@@ -1,16 +1,14 @@
 module.exports = {
-  purge: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
-],
-  darkMode: 'class', // or 'media' or 'class'
+  purge: ["./pages/**/*.tsx", "./components/**/*.tsx"],
+  darkMode: "class",
   theme: {
     fontFamily: {
-      Kaushan: ['Kaushan Script'],
+      sans: ["ui-sans-serif", "system-ui"],
+      Kaushan: ["Kaushan Script"],
     },
     boxShadow: {
-      'custom-light': '0 0 10px #313131',
-      'custom-dark': '5px 5px 10px #0a0c0e , -5px -5px 10px #14161c' 
+      "custom-light": " 0 0 10px #313131",
+      "custom-dark": "5px 5px 10px #0a0c0e , -5px -5px 10px #14161c",
     },
     extend: {
       colors: {
